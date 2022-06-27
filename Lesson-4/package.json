@@ -1,8 +1,9 @@
 {
-  "name": "ts-gb",
+  "name": "ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "types": "./public/scripts/types/index.d.ts",
   "dependencies": {
     "typescript": "^4.7.3"
   },
@@ -13,8 +14,8 @@
     "http-server": "^14.1.1"
   },
   "scripts": {
-    "build": "rm -rf public/scripts && tsc",
-    "build:dev": "rm -rf public/scripts && tsc -p tsconfig-dev.json",
+    "build": "rimraf -rf public/scripts && tsc",
+    "build:dev": "rimraf -rf public/scripts && tsc -p tsconfig-dev.json",
     "start": "http-server -p 3000",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src --ext .js --ext .ts",
